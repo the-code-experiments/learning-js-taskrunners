@@ -1,0 +1,18 @@
+{
+  "name": "learning-grunt",
+  "version": "0.0.1",
+  "description": "Learning grunt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hegdeashwin/learning-Grunt.git"
+  },
+  "author": "Ashwin Hegde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hegdeashwin/learning-Grunt/issues"
+  },
+  "homepage": "https://github.com/hegdeashwin/learning-Grunt#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
