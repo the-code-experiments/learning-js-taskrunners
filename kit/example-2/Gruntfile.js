@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
     grunt.registerTask('myName', 'A task to get the name', function(firstName, lastName) {
