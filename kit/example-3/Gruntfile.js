@@ -2,41 +2,15 @@
 
 module.exports = function(grunt) {
 
-    grunt.initConfig({
+    var _config = {};
 
-        log: {
-            one: [1, 2, 3],
-            two: "Hello World",
-            three: true,
-            four: {
-                five: function() {
-                    grunt.log.writeln("Hi");
-                },
-                six: function() {
-                	grunt.log.writeln("Welcome");
-                }
-            }
-        }
+    function readConfig() {
+        _config = grunt.file.readJSON('config.json');
 
-    });
+        console.log("Project Name: ", _config.project);
+        console.log("Project Version: ", _config.version);
+    }
 
-    grunt.registerMultiTask('log', 'Log stuff', function() {
-        grunt.log.writeln(this.target + ": " + this.data + "\n");
+    grunt.registerTask('default', readConfig);
 
-        if (this.target === 'four') {
-        	console.log(this.data);
-
-        	// for(var d in this.data) {
-        	// 	console.log(this.data[d]());
-        	// }
-
-        	for(var d in this.data) {
-        		console.log(this.data['five']());
-
-        		console.log(this.data['six']());
-        	}
-        }
-    });
-
-    grunt.registerTask('default', 'log');
 };
