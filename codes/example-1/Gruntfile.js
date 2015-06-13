@@ -8,7 +8,7 @@
 
 module.exports = function(grunt) {
 
-    "use stric";
+    "use strict";
 
     /**
      *	@function: print "Hello World" on console.
